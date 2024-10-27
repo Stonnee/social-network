@@ -1,0 +1,44 @@
+{
+  "conversations": [
+    {
+      "participants": ["Jean", "Jeanne"],
+      "messages": [
+        {
+          "sender": "Jean",
+          "content": "Bonjour Jeanne!",
+          "timestamp": "2022-01-01T10:00:00"
+        },
+        {
+          "sender": "Jeanne",
+          "content": "Salut Jean! Comment ça va?",
+          "timestamp": "2022-01-01T10:01:00"
+        },
+        {
+          "sender": "Jean",
+          "content": "Je vais bien, merci! Et toi?",
+          "timestamp": "2022-01-01T10:02:00"
+        }
+      ]
+    },
+    {
+      "participants": ["Jean", "Marc"],
+      "messages": [
+        {
+          "sender": "Jean",
+          "content": "Salut Marc, quoi de neuf?",
+          "timestamp": "2022-01-02T15:00:00"
+        },
+        {
+          "sender": "Marc",
+          "content": "Pas grand-chose, je travaille sur un projet. Et toi?",
+          "timestamp": "2022-01-02T15:01:00"
+        },
+        {
+          "sender": "Jean",
+          "content": "Moi aussi. On se voit plus tard!",
+          "timestamp": "2022-01-02T15:02:00"
+        }
+      ]
+    }
+  ]
+}
