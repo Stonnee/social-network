@@ -19,6 +19,12 @@ function init(){
       reactionButtons.forEach(button => {
         button.addEventListener('click', handleReactionClick);
       });
+
+    // ajoute les listeners pour les boutons de commentaire
+    const commentButtons = document.querySelectorAll('.comments button');
+    commentButtons.forEach(button => {
+    button.addEventListener('click', handleCommentClick);
+  });
     })
     .catch(error => {
       console.error('Error fetching posts:', error);
@@ -59,6 +65,24 @@ function handleReactionClick(event) {
   }
 
 
+}
+
+// Fonction pour gérer les clics sur les boutons de commentaire et ajouter le nouveau commentaire à la liste des commentaires
+function handleCommentClick(event) {
+  const button = event.target;
+  const commentInput = button.previousElementSibling;
+  const commentText = commentInput.value.trim();
+  const postElement = button.closest('.post');
+  const commentsList = postElement.querySelector('.comments ul');
+
+  if (commentText !== '') {
+    const newComment = document.createElement('li');
+    newComment.textContent = commentText;
+    
+    commentsList.appendChild(newComment);
+
+    commentInput.value = '';
+  }
 }
 
 
@@ -106,6 +130,15 @@ function createPostElement(post) {
   postElement.appendChild(commentsElement);
 
   // input commentaire
+  const commentsList = document.createElement('ul');
+  post.comments.forEach(comment => {
+    const commentElement = document.createElement('li');
+    commentElement.textContent = comment;
+    commentsList.appendChild(commentElement);
+  });
+  commentsElement.appendChild(commentsList);
+
+
   const commentInput = document.createElement('input');
   commentInput.type = 'text';
   commentInput.placeholder = 'Add a comment...';
@@ -115,16 +148,7 @@ function createPostElement(post) {
   const commentButton = document.createElement('button');
   commentButton.textContent = 'Comment';
   commentsElement.appendChild(commentButton);
-  console.log('Post element created:', post.comments);
-
-  const commentSection = document.createElement('ul');
-  post.comments.forEach(comment => {
-    const commentElement = document.createElement('li');
-    commentElement.textContent = comment;
-    commentSection.appendChild(commentElement);
-  });
-  postElement.appendChild(commentSection);
-
+  
   return postElement;
 }
 
