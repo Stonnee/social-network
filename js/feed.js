@@ -1,25 +1,29 @@
-
+var POSTS;
+var CONVERSATIONS;
 
 // Récupérer les publications depuis posts.json
-fetch('data/posts.json')
-  .then(response => response.json())
-  .then(posts => {
-    
-    const feedContainer = document.getElementById('post-list');
-    posts.forEach(post => {
-      const postElement = createPostElement(post);
-      console.log('Post element:', postElement);
-      feedContainer.appendChild(postElement);
-    });
+function init(){
+  fetch('data/posts.json')
+    .then(response => response.json())
+    .then(posts => {
+      POSTS = posts;
+      const feedContainer = document.getElementById('post-list');
+      POSTS.forEach(post => {
+        const postElement = createPostElement(post);
+        console.log('Post element:', postElement);
+        feedContainer.appendChild(postElement);
+      });
 
-    const reactionButtons = document.querySelectorAll('.reactions button');
-    reactionButtons.forEach(button => {
-      button.addEventListener('click', handleReactionClick);
+      // Ajoute les listeners pour les boutons de réaction
+      const reactionButtons = document.querySelectorAll('.reactions button');
+      reactionButtons.forEach(button => {
+        button.addEventListener('click', handleReactionClick);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching posts:', error);
     });
-  })
-  .catch(error => {
-    console.error('Error fetching posts:', error);
-  });
+}
 
 
 
@@ -34,48 +38,27 @@ function handleReactionClick(event) {
   console.log('Reaction count element:', postIndex);
   console.log('Parent post element:', postElement);
 
-  fetch('data/posts.json')
-    .then(response => response.json())
-    .then(posts => {
-      const post = posts.find(p => p.id == postIndex);
-      if (post) {
-        switch (button.textContent) {
-          case 'likes':
-            post.likes += 1;
-            break;
-          case 'dislikes':
-            post.dislikes += 1;
-            break;
-          case 'love':
-            post.love += 1;
-            break;
-        }
-        return fetch('data/posts.json', {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(posts)
-        });
-      }
-    })
-    .catch(error => {
-      console.error('Error updating post:', error);
-    });
+  const post = POSTS.find(p => p.id == postIndex);
+  console.log('Post:', post);
+  if (post) {
+    switch (button.textContent) {
+      case 'likes':
+        post.likes += 1;
+        reactionCountElement.textContent = post.likes;
+        break;
+      case 'dislikes':
+        post.dislikes += 1;
+        reactionCountElement.textContent = post.dislikes;
+        break;
+      case 'love':
+        post.love += 1;
+        reactionCountElement.textContent = post.love;
+        break;
+    }
 
-  /* switch (button.textContent) {
-    case 'likes':
-      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
-      break;
-    case 'dislikes':
-      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
-      break;
-    case 'love':
-      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
-      break;
-    default:
-      console.warn('Unknown reaction:', button.textContent);
-  } */
+  }
+
+
 }
 
 
@@ -112,6 +95,7 @@ function createPostElement(post) {
     reactionNumber.textContent = post[reaction];
     const reactionButton = document.createElement('button');
     reactionButton.textContent = reaction;
+    reactionsElement.appendChild(reactionNumber);
     reactionsElement.appendChild(reactionButton);
   });
   postElement.appendChild(reactionsElement);
@@ -146,3 +130,4 @@ function createPostElement(post) {
 
 
 
+init();
