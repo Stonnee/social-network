@@ -11,15 +11,78 @@ fetch('data/posts.json')
       console.log('Post element:', postElement);
       feedContainer.appendChild(postElement);
     });
+
+    const reactionButtons = document.querySelectorAll('.reactions button');
+    reactionButtons.forEach(button => {
+      button.addEventListener('click', handleReactionClick);
+    });
   })
   .catch(error => {
     console.error('Error fetching posts:', error);
   });
 
+
+
+// Fonction pour gérer les clics sur les boutons de réaction
+function handleReactionClick(event) {
+  const button = event.target;
+  const reactionCountElement = button.previousElementSibling;
+  const postElement = button.closest('.post');
+  const postIndex = postElement.dataset.index;
+  
+  console.log('Reaction button clicked:', event);
+  console.log('Reaction count element:', postIndex);
+  console.log('Parent post element:', postElement);
+
+  fetch('data/posts.json')
+    .then(response => response.json())
+    .then(posts => {
+      const post = posts.find(p => p.id == postIndex);
+      if (post) {
+        switch (button.textContent) {
+          case 'likes':
+            post.likes += 1;
+            break;
+          case 'dislikes':
+            post.dislikes += 1;
+            break;
+          case 'love':
+            post.love += 1;
+            break;
+        }
+        return fetch('data/posts.json', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(posts)
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error updating post:', error);
+    });
+
+  /* switch (button.textContent) {
+    case 'likes':
+      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
+      break;
+    case 'dislikes':
+      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
+      break;
+    case 'love':
+      reactionCountElement.textContent = parseInt(reactionCountElement.textContent, 10) + 1;
+      break;
+    default:
+      console.warn('Unknown reaction:', button.textContent);
+  } */
+}
+
+
 // Créer un élément de publication
 function createPostElement(post) {
-  console.log('Creating post element:', post);
   const postElement = document.createElement('div');
+  postElement.dataset.index = post.id;
   postElement.classList.add('post');
 
 
@@ -44,7 +107,9 @@ function createPostElement(post) {
   // boutons de réaction
   const reactionsElement = document.createElement('div');
   reactionsElement.classList.add('reactions');
-  ['Like', 'Dislike', 'Love'].forEach(reaction => {
+  ['likes', 'dislikes', 'love'].forEach(reaction => {
+    const reactionNumber = document.createElement('p');
+    reactionNumber.textContent = post[reaction];
     const reactionButton = document.createElement('button');
     reactionButton.textContent = reaction;
     reactionsElement.appendChild(reactionButton);
