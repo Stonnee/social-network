@@ -4,6 +4,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Passer une excellente journée à la plage!",
         "likes": 120,
+        "dislikes": 10,
+        "love": 50,
         "comments": [
             "Ça a l'air incroyable!",
             "J'aimerais être là!"
@@ -14,6 +16,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Je viens de terminer une course de 5 km!",
         "likes": 85,
+        "dislikes": 5,
+        "love": 30,
         "comments": [
             "Bon travail!",
             "Continue comme ça!"
@@ -24,6 +28,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Délicieuse pizza maison pour le dîner.",
         "likes": 200,
+        "dislikes": 15,
+        "love": 70,
         "comments": [
             "Miam!",
             "Recette s'il vous plaît!"
@@ -34,6 +40,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Vue du coucher de soleil depuis mon balcon.",
         "likes": 150,
+        "dislikes": 8,
+        "love": 60,
         "comments": [
             "Magnifique!",
             "Vue imprenable!"
@@ -44,6 +52,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Explorer la ville aujourd'hui.",
         "likes": 95,
+        "dislikes": 12,
+        "love": 40,
         "comments": [
             "Amuse-toi bien!",
             "Prends beaucoup de photos!"
@@ -54,6 +64,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Café du matin pour commencer la journée.",
         "likes": 110,
+        "dislikes": 7,
+        "love": 45,
         "comments": [
             "Ça a l'air bon!",
             "J'ai aussi besoin de mon café!"
@@ -64,6 +76,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Randonnée en montagne.",
         "likes": 130,
+        "dislikes": 9,
+        "love": 55,
         "comments": [
             "Reste en sécurité!",
             "Profite de la randonnée!"
@@ -74,6 +88,8 @@
         "photo": "https://blog.action-sejours.com/wp-content/uploads/2019/10/sejour-en-irlande.jpg",
         "message": "Lire un bon livre près de la cheminée.",
         "likes": 140,
+        "dislikes": 6,
+        "love": 65,
         "comments": [
             "Quel livre?",
             "Ça a l'air confortable!"
