@@ -1,42 +1,146 @@
 {
   "conversations": [
     {
-      "participants": ["Jean", "Jeanne"],
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        },
+        {
+          "name": "Alice Dupont",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036823-avatar-cosmonaute-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        }
+      ],
       "messages": [
         {
           "sender": "Jean",
-          "content": "Bonjour Jeanne!",
-          "timestamp": "2022-01-01T10:00:00"
+          "content": "Salut Alice, comment vas-tu?",
+          "timestamp": "2022-01-03T09:00:00"
         },
         {
-          "sender": "Jeanne",
-          "content": "Salut Jean! Comment ça va?",
-          "timestamp": "2022-01-01T10:01:00"
-        },
-        {
-          "sender": "Jean",
-          "content": "Je vais bien, merci! Et toi?",
-          "timestamp": "2022-01-01T10:02:00"
+          "sender": "Alice Dupont",
+          "content": "Bonjour Jean, je vais bien, merci!",
+          "timestamp": "2022-01-03T09:01:00"
         }
       ]
     },
     {
-      "participants": ["Jean", "Marc"],
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        },
+        {
+          "name": "Bob Martin",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036801-avatar-barber-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        }
+      ],
       "messages": [
         {
           "sender": "Jean",
-          "content": "Salut Marc, quoi de neuf?",
-          "timestamp": "2022-01-02T15:00:00"
+          "content": "Salut Bob, quoi de neuf?",
+          "timestamp": "2022-01-04T11:00:00"
         },
         {
-          "sender": "Marc",
-          "content": "Pas grand-chose, je travaille sur un projet. Et toi?",
-          "timestamp": "2022-01-02T15:01:00"
+          "sender": "Bob Martin",
+          "content": "Salut Jean, pas grand-chose. Et toi?",
+          "timestamp": "2022-01-04T11:01:00"
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
         },
+        {
+          "name": "Charlie Durand",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        }
+      ],
+      "messages": [
         {
           "sender": "Jean",
-          "content": "Moi aussi. On se voit plus tard!",
-          "timestamp": "2022-01-02T15:02:00"
+          "content": "Salut Charlie, tu es libre ce week-end?",
+          "timestamp": "2022-01-05T14:00:00"
+        },
+        {
+          "sender": "Charlie Durand",
+          "content": "Salut Jean, oui je suis libre. On se voit?",
+          "timestamp": "2022-01-05T14:01:00"
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        },
+        {
+          "name": "David Lefevre",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036946-avatar-businessman-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpgg"
+        }
+      ],
+      "messages": [
+        {
+          "sender": "Jean",
+          "content": "Salut David, tu as vu le dernier film?",
+          "timestamp": "2022-01-06T16:00:00"
+        },
+        {
+          "sender": "David Lefevre",
+          "content": "Salut Jean, oui je l'ai vu. C'était génial!",
+          "timestamp": "2022-01-06T16:01:00"
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        },
+        {
+          "name": "Eva Moreau",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036960-avatar-backpacker-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        }
+      ],
+      "messages": [
+        {
+          "sender": "Jean",
+          "content": "Salut Eva, comment s'est passé ton week-end?",
+          "timestamp": "2022-01-07T18:00:00"
+        },
+        {
+          "sender": "Eva Moreau",
+          "content": "Salut Jean, c'était super! Et toi?",
+          "timestamp": "2022-01-07T18:01:00"
+        }
+      ]
+    },
+    {
+      "participants": [
+        {
+          "name": "Jean",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036884-avatar-boy-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        },
+        {
+          "name": "François Petit",
+          "profile_picture": "https://static.vecteezy.com/ti/vecteur-libre/t2/2036818-avatar-detective-vector-icon-from-avatar-collection-flat-style-illustration-perfect-for-your-website-application-printing-project-etc-vectoriel.jpg"
+        }
+      ],
+      "messages": [
+        {
+          "sender": "Jean",
+          "content": "Salut François, tu as des nouvelles?",
+          "timestamp": "2022-01-08T20:00:00"
+        },
+        {
+          "sender": "François Petit",
+          "content": "Salut Jean, oui j'ai des nouvelles. On se parle bientôt!",
+          "timestamp": "2022-01-08T20:01:00"
         }
       ]
     }
