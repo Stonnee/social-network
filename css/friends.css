@@ -1,0 +1,96 @@
+/* Styles de base pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/*  le titre principal */
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*  le champ de saisie du filtre */
+#filter-input {
+  width: 80%;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  box-shadow: inset 5px 5px 10px #b3b3b3, inset -5px -5px 10px #ffffff;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/*  le champ de saisie du filtre lorsqu'il est focalisé */
+#filter-input:focus {
+  box-shadow: inset 5px 5px 15px #b3b3b3, inset -5px -5px 15px #ffffff;
+}
+
+/*  le conteneur de la liste d'amis */
+#friends-list {
+  width: 80%;
+  max-width: 70%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*  chaque élément d'ami */
+.friend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px #686767, -5px -7px 15px #ffffff;
+  transition: all 0.3s ease;
+  cursor: move;
+}
+
+.friend-item:hover {
+  box-shadow: 5px 5px 20px #b3b3b3, -5px -5px 20px #ffffff;
+}
+
+/*  le nom de l'ami */
+.friend-name {
+  font-size: 1.2em;
+}
+
+/*  le lien de message */
+.friend-message-link {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #b3b3b3, -3px -3px 10px #ffffff;
+  transition: all 0.3s ease;
+}
+
+/*  le lien de message au survol */
+.friend-message-link:hover {
+  color: #0056b3;
+  box-shadow: 3px 3px 15px #b3b3b3, -3px -3px 15px #ffffff;
+}
+
+/*  toutes les balises d'ancrage */
+#friends-list a {
+  background-color: #7253ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
