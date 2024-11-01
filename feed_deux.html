@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/feed_deux.css">
+    <link rel="stylesheet" href="css/feed.css">
+    <title>Feed</title>
+</head>
+<body>
+    <h1>Feed</h1>
+    <div id="post-list">
+        <!-- Vos posts ici -->
+    </div>
+    <div id="friends-widget" class="neumorphic">
+        <h2>Liste d'amis</h2>
+        <input type="text" id="filter-input" placeholder="Filtrer par nom/prénom">
+        <ul id="friends-list">
+            <li class="friend-item" draggable="true" data-name="Alice Dupont">
+                <span class="friend-name">Alice Dupont</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+            <li class="friend-item" draggable="true" data-name="Bob Martin">
+                <span class="friend-name">Bob Martin</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+            <li class="friend-item" draggable="true" data-name="Charlie Durand">
+                <span class="friend-name">Charlie Durand</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+            <li class="friend-item" draggable="true" data-name="David Lefevre">
+                <span class="friend-name">David Lefevre</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+            <li class="friend-item" draggable="true" data-name="Eva Moreau">
+                <span class="friend-name">Eva Moreau</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+            <li class="friend-item" draggable="true" data-name="François Petit">
+                <span class="friend-name">François Petit</span>
+                <a href="messaging.html" class="friend-message-link">Message</a>
+            </li>
+        </ul>
+    </div>
+    <script src="js/feed.js"></script>
+    <script src="js/friends.js"></script>
+</body>
+</html>
